@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="hi.verkefni.vidmot.EventManagerController">
+<VBox alignment="CENTER" prefHeight="460.0" prefWidth="500.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hi.verkefni.vidmot.EventView">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Heiti">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Flokkur">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Dagsetning">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Tími" />
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="360.0">
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="360.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox prefHeight="26.0" prefWidth="360.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <DatePicker prefHeight="26.0" prefWidth="360.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <Spinner prefHeight="26.0" prefWidth="360.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <MediaView fx:id="fxMediaView" fitHeight="200.0" fitWidth="450.0" />
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="460.0">
+         <children>
+            <Button fx:id="fxPauseButton" mnemonicParsing="false" text="Pause">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="fxPlayButton" mnemonicParsing="false" text="Play">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Slider fx:id="fxVolumeSlider" prefHeight="14.0" prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
 </VBox>

@@ -5,10 +5,13 @@ import javafx.scene.control.Label;
 
 public class EventManagerController {
     @FXML
-    private Label welcomeText;
+    private Label fxTest;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    /**
+     * Dummy test til að sjá hvort boð sendist úr MenuController.
+     * Virkar.
+     */
+    public void onTest() {
+        fxTest.setText("Prufa virkar");
     }
 }
